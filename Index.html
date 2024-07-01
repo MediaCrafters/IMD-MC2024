@@ -9,42 +9,74 @@
 </head>
 <body>
 <tw-story><noscript><tw-noscript>JavaScript needs to be enabled to play IMD.</tw-noscript></noscript></tw-story>
-<tw-storydata name="IMD" startnode="1" creator="Twine" creator-version="2.8.1" format="Harlowe" format-version="3.3.8" ifid="69DF2C20-35BD-42A4-B87C-B311088CAC95" options="" tags="" zoom="0.3" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css"></style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="Bologna Experience" tags="" position="1375,400" size="100,100">You arrive at Bologna Centrale, the main train station in Bologna. Planning to visit the city center, you realize you don&#39;t know where to start. Fortunately, you notice advertisements inside the station for an app designed to assist tourists like you. Intrigued, you decide to download it.
+<tw-storydata name="IMD" startnode="1" creator="Twine" creator-version="2.8.1" format="Harlowe" format-version="3.3.8" ifid="69DF2C20-35BD-42A4-B87C-B311088CAC95" options="" tags="" zoom="1" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">.option{
+	color: green;
+  	font-family:Arial;
+}
+
+tw-story {
+  background-color:#efd4ab;
+  font-size:30px;
+  font-family: serif;
+  color:#503d33;
+}</style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="Bologna Experience" tags="" position="1375,400" size="100,100">&lt;img src=&quot;https://mediacrafters.github.io/IMD-MC2024/TWINE MEDIA/Icon_0.png&quot; alt=&quot;Logo Name&quot;&gt;
+&lt;h1&gt;on.fOOt.clues&lt;/h1&gt;
+You arrive at Bologna Centrale, the main train station in Bologna. Planning to visit the city center, you realize you don&#39;t know where to start. Fortunately, you notice advertisements inside the station for an app designed to assist tourists like you. Intrigued, you decide to download it.
+&lt;img src=&quot;https://mediacrafters.github.io/IMD-MC2024/TWINE MEDIA/Bologna-Stazione_Centrale-concourse.jpeg&quot; alt=&quot;Central Station&quot;style=&quot;width:500px; height:400px; display: block; margin: auto;&quot;&gt;
 
 [[start the hunt|The Hunt-Round 1]]</tw-passagedata><tw-passagedata pid="2" name="Fontana del Nettuno" tags="" position="1375,800" size="100,100">The app now provides you with directions on a map, guiding you to the general area of the selected monument and prompting you to follow the route. It specifies that further activities will be proposed only once you reach the designated area.
 
-[[Follow the directions to the monument&#39;s area |Selected Area-Fontana del Nettuno]]</tw-passagedata><tw-passagedata pid="3" name="Castello di Galliera" tags="" position="1250,800" size="100,100">This selection is not active at the moment.
+&lt;!--The simplified map--&gt;
+[[Follow the directions to the monument&#39;s area |Selected Area-Fontana del Nettuno]]  </tw-passagedata><tw-passagedata pid="3" name="Castello di Galliera" tags="" position="1250,800" size="100,100">This selection is not active at the moment.
+Coming soon!
 
 [[return to the previous page|The Hunt-Round 1]]</tw-passagedata><tw-passagedata pid="4" name="Colonna dell&#39;Immacolata" tags="" position="1500,800" size="100,100">This selection is not active at the moment. 
+Coming soon!
 
 [[return to the previous page|The Hunt-Round 1]]</tw-passagedata><tw-passagedata pid="5" name="Selected Area-Fontana del Nettuno" tags="" position="1375,925" size="100,100">Just as you enter the designated area, the app closes the map and informs you that the treasure hunt has begun. To pinpoint the exact location of the monument, you are told you need to follow and complete four challenges within the designated area. These challenges will help you locate the monument. 
 
 If you prefer not to play the game, and are only interested in the monument itself, you have the option to go straight to it and skip the challenges. However, you are warned that doing so will result in a lowered score.
 
 [[play the game|The Game]] 
-[[skip the game and bring me to the monument|The Monument]] </tw-passagedata><tw-passagedata pid="6" name="The Game" tags="" position="1375,1100" size="100,100">THIS IS A DYNAMIC STEP DEPENDING ON HOW MANY CHALLENGES YOU COMPLETED: 
+[[skip the game and bring me to the monument|The Monument]] 
 
-zero challenges: You are presented with four challenges, which you can tackle in any order you prefer. Each challenge is represented by a symbol: a question mark, a camera, a magnifying glass, and a puzzle piece. At the center of the screen lies a map of the designated area, empty.
+(set: $challenges to 0)
+(set: $camera to False)
+(set: $magnifying_glass to False)
+(set: $question_mark to False)
+(set: $puzzle to False)
+(set: $score to 1)</tw-passagedata><tw-passagedata pid="6" name="The Game" tags="" position="1375,1100" size="100,100">(if: $challenges is 0)[ You are presented with four challenges, which you can tackle in any order you prefer. Each challenge is represented by a symbol: a question mark, a camera, a magnifying glass, and a puzzle piece. At the center of the screen lies a map of the designated area, empty. ]
+(if: $challenges is 1 or $challenges is 2 or $challenges is 3) [ You return to the challenge page. You completed $challenges challenge(if: $challenges &gt; 1)[s]. Completed challenges are marked as such, and the map of the designated area is updated with the corresponding pins. You may now select the next challenge to tackle. ]
+(if: $challenges is 4) [ You completed all four challenges! You can now have the final hint that leads to the monument. ]
 
-one, two, three challenges: You return to the challenge page. The completed challenges are marked as such, and the map of the designated area is updated with the corresponding pins. You may now select the next challenge to tackle.
+&lt;div&gt;&lt;img src=&quot;https://mediacrafters.github.io/IMD-MC2024/TWINE MEDIA/Icon_4.png&quot; alt=&quot;Question Mark&quot; style=&quot;width:50px; height:50px;&quot;&gt;
+&lt;img src=&quot;https://mediacrafters.github.io/IMD-MC2024/TWINE MEDIA/Icon_1.png&quot; alt=&quot;Camera&quot;  style=&quot;width:50px; height:50px;&quot;&gt;
+&lt;img src=&quot;https://mediacrafters.github.io/IMD-MC2024/TWINE MEDIA/Icon_2.png&quot; alt=&quot;Magnifying Glass&quot;  style=&quot;width:50px; height:50px;&quot;&gt;
+&lt;img src=&quot;https://mediacrafters.github.io/IMD-MC2024/TWINE MEDIA/Icon_3.png&quot; alt=&quot;Puzzle Piece&quot;  style=&quot;width:50px; height:50px;&quot;&gt;
+&lt;img src=&quot;https://mediacrafters.github.io/IMD-MC2024/TWINE MEDIA/Icon_5.png&quot; alt=&quot;Final Hint&quot;  style=&quot;width:50px; height:50px;&quot;&gt;&lt;/div&gt;
 
-four challenges: You completed all four challenges! You can now have the final hint that leads to the monument.
-
-always: If you prefer not to play the game anymore and are only interested in the monument itself, you have the option to go straight to it and skip the challenges. However, you are warned that doing so will result in a lowered score.
+If you prefer not to play the game anymore and are only interested in the monument itself, you have the option to go straight to it and skip the challenges. However, you are warned that doing so will result in a lowered score.
 
 
-[[question mark|Question Mark]] 
-[[camera|Camera]]
-[[magnifying glass|Magnifying Glass]] 
-[[puzzle piece|Puzzle Piece]] 
-[[final hint|Final Hint]] 
+(if: $question_mark is False)[ [[question mark|Question Mark]] ]
+(if: $camera is False)[ [[camera|Camera]] ]
+(if: $magnifying_glass is False)[ [[magnifying glass|Magnifying Glass]] ]
+(if: $puzzle is False)[ [[puzzle piece|Puzzle Piece]] ]
+(if: $challenges is 4)[ [[final hint|Final Hint]] ]
 [[skip the game and bring me to the monument|The Monument]] </tw-passagedata><tw-passagedata pid="7" name="The Monument" tags="" position="2025,525" size="100,100">The monument: Neptune’s Fountain.
 The app now provides you with photos and lengthy information about it: {from file}
 The app then gives you the option to either conclude the hunt for this monument or engage in additional tasks related to it. These tasks will provide extra details and enhance your final score.
 
 [[end the hunt|Hunt End]]
 [[continue playing|Neptune&#39;s Fountain]]
-</tw-passagedata><tw-passagedata pid="8" name="Question Mark" tags="" position="1375,1350" size="100,100">You decide to tackle the “question mark” challenge. The app presents you with a dark silhouette that shows the general shape of an object or building in the designated area, prompting you to find and take a picture of it. You can only claim this challenge as completed if you guessed correctly.
+
+(set: $tasks to 0)
+(set: $salaborsa to False)
+(set: $folklore to False)
+(set: $inscription to False)
+(if: $challenges is 5)[(set: $score to $score + 1)]</tw-passagedata><tw-passagedata pid="8" name="Question Mark" tags="" position="1375,1350" size="100,100">You decide to tackle the “question mark” challenge. The app presents you with a dark silhouette that shows the general shape of an object or building in the designated area, prompting you to find and take a picture of it. You can only claim this challenge as completed if you guessed correctly.
+
+&lt;img src=&quot;https://mediacrafters.github.io/IMD-MC2024/TWINE MEDIA/Basilica.silhouette.jpg&quot;&gt;
 
 If you prefer not to play the game anymore and are only interested in the monument itself, you have the option to go straight to it and skip the challenges. However, you are warned that doing so will result in a lowered score.
 
@@ -54,6 +86,10 @@ If you prefer not to play the game anymore and are only interested in the monume
 [[skip the game and bring me to the monument|The Monument]] </tw-passagedata><tw-passagedata pid="9" name="Basilica of San Petronio" tags="" position="1475,1475" size="100,100">Congrats! You completed the challenge. The silhouette belonged to the Basilica of San Petronio. As a reward, the app unlocks the related hint on the map of the designated area, adding a pin on the position of the Basilica, and provides you some information about it:
 
 “The Basilica of San Petronio, situated in Bologna, Italy, is a grand church dedicated to Saint Petronius, the city&#39;s patron saint. Construction began in 1390, blending elements of Italian Gothic and Renaissance architecture. Its unfinished facade adds to its allure, while inside, visitors marvel at its vast interior adorned with intricate chapels housing remarkable artworks by celebrated painters. This historic basilica stands as a testament to Bologna&#39;s rich cultural heritage and architectural prowess, attracting both religious pilgrims and art enthusiasts from around the world.”
+&lt;!--the map with Basilica pinned--&gt;
+
+(set: $challenges to $challenges + 1)
+(set: $question_mark to True)
 
 [[return to the challlenges page|The Game]] </tw-passagedata><tw-passagedata pid="10" name="Camera" tags="" position="350,1150" size="100,100">You decide to tackle the &quot;camera&quot; challenge. The app shows you a picture of a notable feature taken within the designated area, prompting you to locate the exact spot where the picture was taken and capture a similar photo. You can only complete this challenge successfully if you identify the correct location.
 
@@ -63,20 +99,30 @@ If you prefer not to play the game anymore and are only interested in the monume
 [[take a picture of the pavement in the middle of Piazza Maggiore|Not Quatro Cantoni]] 
 [[take a picture of a stranger without being noticed|Not Quatro Cantoni]] 
 [[skip the game and bring me to the monument|The Monument]]
-</tw-passagedata><tw-passagedata pid="11" name="Magnifying Glass" tags="" position="800,1275" size="100,100">You decide to tackle the &quot;magnifying glass&quot; challenge. The app presents you with four very similar pictures of a notable feature within the designated area. One of these pictures is authentic, while the other three are slightly altered with incorrect details. The app prompts you to identify and select the genuine picture among the four to successfully complete this challenge.
+</tw-passagedata><tw-passagedata pid="11" name="Magnifying Glass" tags="" position="800,1275" size="100,100">You decide to tackle the &quot;magnifying glass&quot; challenge. The app presents you with four very similar pictures of a notable feature within the designated area. One of these pictures is authentic, while the other three are slightly altered with incorrect details. The app prompts you to identify and select the genuine picture among the four to successfully complete this challenge. 
 
 If you prefer not to play the game anymore and are only interested in the monument itself, you have the option to go straight to it and skip the challenges. However, you are warned that doing so will result in a lowered score.
 
+&lt;img src=&quot;https://mediacrafters.github.io/IMD-MC2024/TWINE MEDIA/Pope Gregory XIII-better wooden Staff.png&quot; alt=&quot;Picture 1&quot; style=&quot;margin-right:20px; width: 400px; height: 500px&quot;&gt;
 [[select picture 1|Wrong Pope]] 
+&lt;img src=&quot;https://mediacrafters.github.io/IMD-MC2024/TWINE MEDIA/Pope Gregory XIII-No Lace.jpg&quot; alt=&quot;Picture 2&quot; style=&quot;margin-right:20px; width: 400px; height: 500px&quot;&gt;
 [[select picture 2|Wrong Pope]] 
+&lt;img src=&quot;https://mediacrafters.github.io/IMD-MC2024/TWINE MEDIA/Pope Gregory XIII in Piazza Maggiore, Bologna.jpg&quot; alt=&quot;Picture 3&quot; style=&quot;margin-right:20px; width: 400px; height: 500px&quot;&gt; 
 [[select picture 3|Correct Pope]] 
+&lt;img src=&quot;https://mediacrafters.github.io/IMD-MC2024/TWINE MEDIA/Pope Gregory XIII-Fist.png&quot; alt=&quot;Picture 4&quot; style=&quot;margin-right:20px; width: 400px; height: 500px&quot;&gt;
 [[select picture 4|Wrong Pope]] 
+&lt;img src=&quot;https://mediacrafters.github.io/IMD-MC2024/TWINE MEDIA/Pope Gregory XIII-Shiny crown.png&quot; alt=&quot;Picture 5&quot; style=&quot;margin-right:20px; width: 400px; height: 500px&quot;&gt; 
+[[select picture 5|Wrong Pope]] 
 [[skip the game and bring me to the monument|The Monument]]</tw-passagedata><tw-passagedata pid="12" name="Puzzle Piece" tags="" position="1900,1225" size="100,100">You decide to tackle the “puzzle piece” challenge. The app presents you with a puzzle made from a picture of a prominent feature within the designated area, prompting you to restore the picture by solving the puzzle. You can only claim this challenge as completed once you solve the puzzle.
+&lt;img src=&quot;https://mediacrafters.github.io/IMD-MC2024/TWINE MEDIA/lampione-dei-neonati-puzzle-unscrambled.jpg&quot;&gt;
+&lt;a href=&quot;https://www.epuzzle.info/en/puzzle/play/architecture/178976-lampione-dei-neonati#4x6&quot; target=&quot;_blank&quot; style=&quot;color: blue; text-decoration: underline;&quot;&gt;Here you cwill be redirected to E-puzzle website&lt;/a&gt;
 
 If you prefer not to play the game anymore and are only interested in the monument itself, you have the option to go straight to it and skip the challenges. However, you are warned that doing so will result in a lowered score.
 
 [[solve the puzzle|Lampione dei Neonati]] 
-[[skip the game and bring me to the monument|The Monument]]</tw-passagedata><tw-passagedata pid="13" name="Final Hint" tags="" position="2325,1225" size="100,100">The four pins, unlocked by the respective challenges, are now connected and their intersection forms an X on the map of the designated area that marks the location of the monument. All you need to do is find it and take a picture of it
+[[skip the game and bring me to the monument|The Monument]]</tw-passagedata><tw-passagedata pid="13" name="Final Hint" tags="" position="2325,1225" size="100,100">The four pins, unlocked by the respective challenges, are now connected and their intersection forms an X on the map of the designated area that marks the location of the monument. All you need to do is find it and take a picture of it. 
+
+&lt;!--The map with all 4 pins connected--&gt;
 
 If you prefer not to play the game anymore and are only interested in the monument itself, you have the option to go straight to it and skip the challenges. However, you are warned that doing so will result in a lowered score.
 
@@ -88,26 +134,29 @@ If you prefer not to play the game anymore and are only interested in the monume
 
 “The &quot;Quattro Cantoni&quot; are four corner columns situated under the portico of Palazzo Re Enzo in Piazza Maggiore, Bologna. These columns are renowned for their unique acoustic properties. When standing at one of the columns and speaking towards another, even at a whisper, sound travels remarkably well and clearly to the listener at the opposite column. This phenomenon is due to the columns&#39; specific placement, which creates a focused acoustic reflection and amplification.
 Locals and tourists often gather around the Quattro Cantoni to experience this intriguing acoustic effect firsthand. It serves as a fascinating example of architectural ingenuity from Bologna&#39;s rich history, offering visitors a playful and memorable way to interact with the city&#39;s cultural heritage.”
+(set: $challenges to $challenges + 1)
+(set: $camera to True)
 
 [[return to the challlenges page|The Game]] </tw-passagedata><tw-passagedata pid="15" name="Lampione dei Neonati" tags="" position="1900,1350" size="100,100">Congrats! You completed the challenge. The subject of the picture is the Lampione dei Neonati (street lamp of newborns). As a reward, the app unlocks the related hint on the map of the designated area, adding a pin on the position of the street lamp, and provides you some information about it:
 
 “The &quot;Lampione dei Neonati&quot; in Bologna is a lamp post with a fascinating tradition. Located near the Basilica of San Petronio, it has become a symbol of hope for newborns. The tradition dates back to medieval times when abandoned infants were left near the lamp post, where they would be discovered and cared for by passersby. Today, the lamp post serves as a reminder of Bologna&#39;s compassion and community spirit, reflecting its historical role in providing refuge and care for vulnerable children.”
+&lt;img src=&quot;https://mediacrafters.github.io/IMD-MC2024/TWINE MEDIA/lampione-dei-neonati-bologna.jpg&quot;&gt;
 
-[[return to the challlenges page|The Game]] </tw-passagedata><tw-passagedata pid="16" name="Neptune&#39;s Fountain" tags="" position="2650,475" size="100,100">DYNAMIC STEP 
-zero tasks: You are presented with three tasks, which you can tackle in any order you prefer. They are called as such: SalaBorsa task, Inscription task, Folklore task.
+(set: $challenges to $challenges + 1)
+(set: $puzzle to True)
 
-one, two tasks: you return to the task page, and the completed tasks are marked as such. You may select the next task from here
+[[return to the challlenges page|The Game]] </tw-passagedata><tw-passagedata pid="16" name="Neptune&#39;s Fountain" tags="" position="2650,475" size="100,100">(if: $tasks is 0)[ You are presented with three tasks, which you can tackle in any order you prefer. They are called as such: SalaBorsa task, Inscription task, Folklore task. ]
+(if: $tasks is 1 or $tasks is 2)[ You tackled $tasks task(if: $tasks &gt; 1)[s]. You return to the task page, and the completed tasks are marked as such. You may select the next task from here ]
+(if: $tasks is 3)[ You’ve completed all the tasks! You’ve mastered this monument and you have learned everything you need to know. You may now end the hunt for your score. ]
 
-three tasks: You’ve completed all the tasks! You’ve mastered this monument and you have learned everything you need to know. You may now end the hunt for your score.
+(if: $tasks is not 3)[ You may also choose to end the hunt now without completing the additional tasks, thus giving up on a full score. ]
 
-Always: You may also choose to end the hunt now without completing the additional tasks, thus giving up on a full score.
-
-[[select SalaBorsa task|Salaborsa]] 
-[[select Inscription task|Inscription]] 
-[[select Folklore task|Folklore]] 
+(if: $salaborsa is False)[ [[select SalaBorsa task|Salaborsa]] ]
+(if: $inscription is False)[ [[select Inscription task|Inscription]] ]
+(if: $folklore is False)[ [[select Folklore task|Folklore]] ]
 [[end the hunt|Hunt End]] 
 
-</tw-passagedata><tw-passagedata pid="17" name="Salaborsa" tags="" position="2475,675" size="100,100">You decide to face the SalaBorsa task. The app marks a spot on the map of the designated area, and prompts you to reach it. The task can be completed only when your GPS position matches the given location.
+(if: $tasks is 3)[(set: $score to $score + 1)]</tw-passagedata><tw-passagedata pid="17" name="Salaborsa" tags="" position="2475,675" size="100,100">You decide to face the SalaBorsa task. The app marks a spot on the map of the designated area, and prompts you to reach it. The task can be completed only when your GPS position matches the given location.
 
 You may also choose to end the hunt now without completing the additional tasks, thus giving up on a full score.
 
@@ -128,14 +177,18 @@ You may also choose to end the hunt now without completing the additional tasks,
 [[walk twice around the fountain|Around the Fountain]] 
 [[stand still and blatantly lie|Around the Fountain]] 
 [[end the hunt|Hunt End]] 
-</tw-passagedata><tw-passagedata pid="20" name="Hunt End" tags="" position="3200,525" size="100,100">You have finished your first hunt.  You can start over with a new monument or go to social media section to communicate with others having the same experience. 
+</tw-passagedata><tw-passagedata pid="20" name="Hunt End" tags="" position="3200,525" size="100,100">You have finished your first hunt. Your score is $score out of 3. You can start over with a new monument or go to social media section to communicate with others having the same experience. 
 
 [[go to the map and share my experience with others|The Map]]
 [[start with a new monument|The Hunt-Round 2]] </tw-passagedata><tw-passagedata pid="21" name="The Hunt-Round 1" tags="" position="1375,600" size="100,100">After setting up the app, which includes creating an account and granting necessary permissions, you are presented with a choice between three nearby monuments chosen based on your location. At this point, you don&#39;t know the names or appearances of these monuments; you can only see the general areas where they are located, their distance from you and a simplified route connecting you and the monument on a map.
 
-[[Site 1|Castello di Galliera]]
-[[Site 2|Fontana del Nettuno]]
-[[Site 3|Colonna dell&#39;Immacolata]]</tw-passagedata><tw-passagedata pid="22" name="The Map" tags="" position="3300,875" size="100,100">In this area of the app you are presented with an updated map of the places you have visited and hunts you have completed. 
+
+
+[[&lt;div style=&quot;display: flex; flex-direction: row&quot;&gt;&lt;img src=&quot;https://mediacrafters.github.io/IMD-MC2024/TWINE MEDIA/Castello di Galliera.jpg&quot; style=&quot;width:50px; height:50px; margin-right:20px&quot;&gt;&lt;span class=&quot;option&quot;&gt;Site 1&lt;/span&gt;&lt;/div&gt;|Castello di Galliera]]
+
+[[&lt;div style=&quot;display: flex; flex-direction: row&quot;&gt;&lt;img src=&quot;https://mediacrafters.github.io/IMD-MC2024/TWINE MEDIA/Fontana-del-Nettuno.jpg&quot; style=&quot;width:50px; height:50px; margin-right:20px&quot;&gt;&lt;span class=&quot;option&quot;&gt;Site 2&lt;/span&gt;&lt;/div&gt;|Fontana del Nettuno]]
+
+[[&lt;div style=&quot;display: flex; flex-direction: row&quot;&gt;&lt;img src=&quot;https://mediacrafters.github.io/IMD-MC2024/TWINE MEDIA/Colonna dell&#39;Immacolata.jpg&quot;  style=&quot;width:50px; height:50px; margin-right:20px&quot;&gt;&lt;span class=&quot;option&quot;&gt;Site 3&lt;/span&gt;&lt;/div&gt;|Colonna dell&#39;Immacolata]]</tw-passagedata><tw-passagedata pid="22" name="The Map" tags="" position="3300,875" size="100,100">In this area of the app you are presented with an updated map of the places you have visited and hunts you have completed. 
 You can review the details about each monument or connect with other users and share your experience with them.
 
 [[return to the end of hunt|Hunt End]]</tw-passagedata><tw-passagedata pid="23" name="The Hunt-Round 2" tags="" position="3450,525" size="100,100">You are presented with a choice between three nearby monuments chosen based on your location. At this point, you don&#39;t know the names or appearances of these monuments. You can only see the general areas where they are located, their distance from you and a simplified route connecting you and the monument on a map. 
@@ -148,11 +201,14 @@ One of the intriguing aspects of Neptune&#39;s Fountain in Bologna is the optica
 The optical illusion revolves around the positioning of Neptune&#39;s left hand. When viewed from a specific angle, the thumb of Neptune&#39;s outstretched left hand aligns in such a way that it appears to be part of his lower anatomy, creating the illusion of an erect phallus. This clever design by Giambologna was likely intended as a playful nod to the vitality and power traditionally associated with Neptune as a symbol of the sea.
 
 Over the centuries, this optical illusion has sparked both fascination and controversy. It adds a layer of complexity and intrigue to the fountain&#39;s artistic interpretation, blending classical mythology with Renaissance artistry and a subtle hint of whimsy.
-
+(set: $tasks to $tasks + 1)
+(set: $salaborsa to True)
 
 [[return to task page|Neptune&#39;s Fountain]]
 </tw-passagedata><tw-passagedata pid="25" name="Around the Fountain" tags="" position="2650,900" size="100,100">Congrats! You’ve completed the task (let&#39;s hope so). What you’ve just done is very similar to an ancient tradition linked to Neptune’s Fountain.
 In Bologna, it stands not only as a symbol of artistic brilliance but also as a cultural icon intertwined with local traditions. One such tradition has its roots in the students of the historic University of Bologna, believed to be the oldest university in the world. Before sitting for exams, students engage in a unique ritual at the fountain, circling the Fontana del Nettuno twice counterclockwise for good luck and success. This practice, originating from the belief that the sculptor Giambologna himself circled the fountain during its construction, highlights its significance beyond its artistic merits. It serves as a communal space where students gather, imbued with hopes and aspirations as they face academic challenges.
+(set: $tasks to $tasks + 1)
+(set: $folklore to True)
 
 [[return to task page|Neptune&#39;s Fountain]]</tw-passagedata><tw-passagedata pid="26" name="Inscription Fact" tags="" position="3000,825" size="100,100">Congrats! You’ve completed the task.
 Neptune’s Fountain features several inscriptions that highlight its historical and civic significance:
@@ -170,11 +226,14 @@ Neptune’s Fountain features several inscriptions that highlight its historical
    Marks the year 1564, signifying a milestone in the fountain&#39;s completion or dedication under Pope Pius IV and Legate Pier Donato Cesi.
 
 These inscriptions collectively underscore Neptune&#39;s Fountain as a significant cultural and historical landmark in Bologna, reflecting Renaissance ideals of urban planning, public welfare, and artistic patronage.
+(set: $tasks to $tasks + 1)
+(set: $inscription to True)
 
 [[return to task page|Neptune&#39;s Fountain]]</tw-passagedata><tw-passagedata pid="27" name="Not Inscription" tags="" position="2875,900" size="100,100">Unfortunately, this is not the right answer. Squint your eyes and try again.
 
 [[try again|Inscription]] </tw-passagedata><tw-passagedata pid="28" name="Not Basilica" tags="" position="1325,1525" size="100,100">Unfortunately, this is not the right answer. Look around and try again.
 
+&lt;img src=&quot;https://mediacrafters.github.io/IMD-MC2024/TWINE MEDIA/Icon_6.png&quot; alt=&quot;Try again&quot;&gt;
 [[try again|Question Mark]] </tw-passagedata><tw-passagedata pid="29" name="Not Quatro Cantoni" tags="" position="225,1350" size="100,100">Unfortunately, this is not the right answer. Look around and try again.
 
 [[try again|Camera]]</tw-passagedata><tw-passagedata pid="30" name="Wrong Pope" tags="" position="725,1475" size="100,100">Unfortunately, this is not the right answer. Look closely at the statue and try again.
@@ -183,12 +242,21 @@ These inscriptions collectively underscore Neptune&#39;s Fountain as a significa
 
 “The statue of Pope Gregory XIII in Piazza Maggiore, Bologna, stands as a significant historical monument. Erected in 1580, it honors Pope Gregory XIII, known for reforming the calendar with the introduction of the Gregorian calendar in 1582. The statue portrays him in a regal pose, symbolizing his influential role in shaping the modern calendar system. Positioned prominently in the square, it serves as a reminder of Bologna&#39;s cultural and historical ties to the papacy and the broader European Renaissance.”
 
+&lt;!--the map with Pope&#39;s statue pinned--&gt;
+
+(set: $challenges to $challenges + 1)
+(set: $magnifying_glass to True)
+
 [[return to the challlenges page|The Game]] </tw-passagedata><tw-passagedata pid="32" name="Not Nettuno" tags="" position="2400,1475" size="100,100">Unfortunately, this is not the right answer. Make sure you’re in the right place and try again.
+&lt;img src=&quot;https://mediacrafters.github.io/IMD-MC2024/TWINE MEDIA/Icon_6.png&quot; alt=&quot;Try again&quot;&gt;
 
 [[try again|Final Hint]]</tw-passagedata><tw-passagedata pid="33" name="Nettuno" tags="" position="2550,1400" size="100,100">Congratulations! The treasure hunt is over. 
 You found the monument: Neptune’s Fountain. 
+&lt;img src=&quot;https://mediacrafters.github.io/IMD-MC2024/TWINE MEDIA/Nettuno.jpg&quot; &gt;
 
-[[bring me to the monument|The Monument]] </tw-passagedata></tw-storydata>
+[[bring me to the monument|The Monument]] 
+
+(set: $challenges to 5)</tw-passagedata></tw-storydata>
 <script title="Twine engine code" data-main="harlowe">(function(){"use strict";
 var require,define;!function(){var e={},r={};require=function(i){var n=e[i];return n&&(r[i]=n[1].apply(void 0,n[0].map(require)),e[i]=void 0),r[i]},(define=function(r,i,n){if("function"==typeof r)return r();e[r]=[i,n]}).amd=!0}();/*!
  * https://github.com/paulmillr/es6-shim
