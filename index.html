@@ -9,12 +9,21 @@
 </head>
 <body>
 <tw-story><noscript><tw-noscript>JavaScript needs to be enabled to play IMD.</tw-noscript></noscript></tw-story>
-<tw-storydata name="IMD" startnode="1" creator="Twine" creator-version="2.9.0" format="Harlowe" format-version="3.3.9" ifid="69DF2C20-35BD-42A4-B87C-B311088CAC95" options="" tags="" zoom="1" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">
+<tw-storydata name="IMD" startnode="1" creator="Twine" creator-version="2.9.0" format="Harlowe" format-version="3.3.9" ifid="69DF2C20-35BD-42A4-B87C-B311088CAC95" options="" tags="" zoom="1" hidden>
+<style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">
 tw-story {
   background-color:#efd4ab;
   font-size:30px;
   font-family: serif;
   color:#503d33;
+}
+
+tw-link, .enchantment-link, .visited {
+  color: brown;
+}
+
+tw-link:hover, .enchantment-link:hover, .visited:hover {
+  color: #80471c;
 }
 
 .header{
@@ -43,11 +52,6 @@ tw-story {
   margin-right:20px;
 }
 
-.icon span{
-	color: green;
-  	font-family:Arial;
-}
-
 .map {
   width:50%;
   display:block;
@@ -70,6 +74,10 @@ tw-story {
   margin:50px auto auto;
 }
 
+.fail {
+  max-width: 200px;
+}
+
 .try{
   text-align:center;
 }
@@ -85,7 +93,10 @@ tw-story {
   width:50%;
   display:block;
   margin:auto;
-}</style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="Bologna Experience" tags="" position="1375,400" size="100,100">&lt;header&gt;
+}
+</style>
+<script role="script" id="twine-user-script" type="text/twine-javascript"></script>
+<tw-passagedata pid="1" name="Bologna Experience" tags="" position="1375,400" size="100,100">&lt;header&gt;
 
 
 &lt;/header&gt;
@@ -203,10 +214,10 @@ The app then gives you the option to either conclude the hunt for this monument 
 
 If you prefer not to play the game anymore and are only interested in the monument itself, you have the option to go straight to it and skip the challenges. However, you are warned that doing so will result in a lowered score.
 
-[[take a picture of a pigeon|Not Basilica]] 
+[[take a picture of a pigeon|Not Basilica - Pigeon]] 
 [[take a picture of Basilica of San Petronio|Basilica of San Petronio]]
-[[take a picture of Palazzo Re Enzo|Not Basilica]] 
-[[skip the game and bring me to the monument|The Monument]] </tw-passagedata><tw-passagedata pid="9" name="Basilica of San Petronio" tags="" position="1475,1475" size="100,100">&lt;img src=&quot;TWINE MEDIA/Basilica.Old Postcard.jpg&quot;class=&quot;monument&quot;&gt;
+[[take a picture of Palazzo Re Enzo|Not Basilica - Re Enzo]] 
+[[skip the game and bring me to the monument|The Monument]] </tw-passagedata><tw-passagedata pid="9" name="Basilica of San Petronio" tags="" position="1550,1450" size="100,100">&lt;img src=&quot;TWINE MEDIA/Basilica.Old Postcard.jpg&quot;class=&quot;monument&quot;&gt;
 Congrats! You completed the challenge. The silhouette belonged to the Basilica of San Petronio. As a reward, the app unlocks the related hint on the map of the designated area, adding a pin on the position of the Basilica, and provides you some information about it:
 
 “The Basilica of San Petronio, situated in Bologna, Italy, is a grand church dedicated to Saint Petronius, the city&#39;s patron saint. Construction began in 1390, blending elements of Italian Gothic and Renaissance architecture. Its unfinished facade adds to its allure, while inside, visitors marvel at its vast interior adorned with intricate chapels housing remarkable artworks by celebrated painters. This historic basilica stands as a testament to Bologna&#39;s rich cultural heritage and architectural prowess, attracting both religious pilgrims and art enthusiasts from around the world.”
@@ -223,8 +234,8 @@ Congrats! You completed the challenge. The silhouette belonged to the Basilica o
 If you prefer not to play the game anymore and are only interested in the monument itself, you have the option to go straight to it and skip the challenges. However, you are warned that doing so will result in a lowered score.
 
 [[take a picture of the ceiling of “Quattro Cantoni” under Palazzo Re Enzo|Quatro Cantoni]]
-[[take a picture of the pavement in the middle of Piazza Maggiore|Not Quatro Cantoni]] 
-[[take a picture of a stranger without being noticed|Not Quatro Cantoni]] 
+[[take a picture of the pavement in the middle of Piazza Maggiore|Not Quattro Cantoni - Pavement]] 
+[[take a picture of a stranger without being noticed|Not Quattro Cantoni - Stranger]] 
 [[skip the game and bring me to the monument|The Monument]]
 </tw-passagedata><tw-passagedata pid="11" name="Magnifying Glass" tags="" position="800,1275" size="100,100">You decide to tackle the &quot;magnifying glass&quot; challenge. The app presents you with four very similar pictures of a notable feature within the designated area. One of these pictures is authentic, while the other three are slightly altered with incorrect details. The app prompts you to identify and select the genuine picture among the four to successfully complete this challenge. 
 
@@ -260,11 +271,11 @@ If you prefer not to play the game anymore and are only interested in the monume
 
 If you prefer not to play the game anymore and are only interested in the monument itself, you have the option to go straight to it and skip the challenges. However, you are warned that doing so will result in a lowered score.
 
-[[take a picture of some porticoes|Not Nettuno]] 
+[[take a picture of some porticoes|Not Nettuno - Porticoes]] 
 [[take a picture of Neptune’s Fountain|Nettuno]] 
-[[take a selfie|Not Nettuno]] 
+[[take a selfie|Not Nettuno - Selfie]] 
 [[skip the game and bring me to the monument|The Monument]] 
-</tw-passagedata><tw-passagedata pid="14" name="Quatro Cantoni" tags="" position="375,1350" size="100,100">Congrats! You completed the challenge. The picture was taken inside “Quattro Cantoni”. As a reward, the app unlocks the related hint on the map of the designated area, adding a pin on the position where the picture was taken, and provides you some information about the place:
+</tw-passagedata><tw-passagedata pid="14" name="Quatro Cantoni" tags="" position="500,1300" size="100,100">Congrats! You completed the challenge. The picture was taken inside “Quattro Cantoni”. As a reward, the app unlocks the related hint on the map of the designated area, adding a pin on the position where the picture was taken, and provides you some information about the place:
 
 “The &quot;Quattro Cantoni&quot; are four corner columns situated under the portico of Palazzo Re Enzo in Piazza Maggiore, Bologna. These columns are renowned for their unique acoustic properties. When standing at one of the columns and speaking towards another, even at a whisper, sound travels remarkably well and clearly to the listener at the opposite column. This phenomenon is due to the columns&#39; specific placement, which creates a focused acoustic reflection and amplification.
 Locals and tourists often gather around the Quattro Cantoni to experience this intriguing acoustic effect firsthand. It serves as a fascinating example of architectural ingenuity from Bologna&#39;s rich history, offering visitors a playful and memorable way to interact with the city&#39;s cultural heritage.”
@@ -310,8 +321,8 @@ You may also choose to end the hunt now without completing the additional tasks,
 
 You may also choose to end the hunt now without completing the additional tasks, thus giving up on a full score.
 
-[[take a picture of Neptune’s hand|Not Inscription]] 
-[[take a picture of the water|Not Inscription]]
+[[take a picture of Neptune’s hand|Not Inscription - Hand]] 
+[[take a picture of the water|Not Inscription - Water]]
 [[take a picture of the inscription at the base of the fountain|Inscription Fact]] 
 [[end the hunt|Hunt End]] 
 </tw-passagedata><tw-passagedata pid="19" name="Folklore" tags="" position="2650,675" size="100,100">You decide to face the Folklore task. The app asks you to walk around the fountain counterclockwise twice. You are free to let the app know when you’ve completed this task.
@@ -343,7 +354,7 @@ You can review the details about each monument or connect with other users and s
 
 [[&lt;div class=&quot;icon&quot;&gt;&lt;img src=&quot;TWINE MEDIA/Fontana-del-Nettuno.jpg&quot;&gt;&lt;span&gt;Site 2&lt;/span&gt;&lt;/div&gt;|Fontana del Nettuno]]
 
-[[&lt;div class=&quot;icon&quot;&gt;&lt;img src=&quot;TWINE MEDIA/Colonna-dell&#39;Immacolata.jpg&quot;&gt;&lt;span&gt;Site 3&lt;/span&gt;&lt;/div&gt;|Colonna dell&#39;Immacolata]]</tw-passagedata><tw-passagedata pid="24" name="Salaborsa Spot" tags="" position="2475,900" size="100,100">You’ve reached the given spot and completed the task! You are now in front of Sala Borsa, and right under the staircase you should be able to see a darker tile on the floor: stand there and look towards Neptune’s Fountain.
+[[&lt;div class=&quot;icon&quot;&gt;&lt;img src=&quot;TWINE MEDIA/Colonna-dell&#39;Immacolata.jpg&quot;&gt;&lt;span&gt;Site 3&lt;/span&gt;&lt;/div&gt;|Colonna dell&#39;Immacolata]]</tw-passagedata><tw-passagedata pid="24" name="Salaborsa Spot" tags="" position="2450,875" size="100,100">You’ve reached the given spot and completed the task! You are now in front of Sala Borsa, and right under the staircase you should be able to see a darker tile on the floor: stand there and look towards Neptune’s Fountain.
 One of the intriguing aspects of Neptune&#39;s Fountain in Bologna is the optical illusion associated with its design. The fountain was created by the Flemish sculptor Giambologna (Jean de Boulogne) between 1563 and 1566. It features a majestic bronze statue of Neptune, the Roman god of the sea, standing atop a pedestal surrounded by mythical sea creatures.
 
 The optical illusion revolves around the positioning of Neptune&#39;s left hand. When viewed from a specific angle, the thumb of Neptune&#39;s outstretched left hand aligns in such a way that it appears to be part of his lower anatomy, creating the illusion of an erect phallus. This clever design by Giambologna was likely intended as a playful nod to the vitality and power traditionally associated with Neptune as a symbol of the sea.
@@ -353,12 +364,12 @@ Over the centuries, this optical illusion has sparked both fascination and contr
 (set: $salaborsa to True)
 
 [[return to task page|Neptune&#39;s Fountain]]
-</tw-passagedata><tw-passagedata pid="25" name="Around the Fountain" tags="" position="2650,900" size="100,100">Congrats! You’ve completed the task (let&#39;s hope so). What you’ve just done is very similar to an ancient tradition linked to Neptune’s Fountain.
+</tw-passagedata><tw-passagedata pid="25" name="Around the Fountain" tags="" position="2575,875" size="100,100">Congrats! You’ve completed the task (let&#39;s hope so). What you’ve just done is very similar to an ancient tradition linked to Neptune’s Fountain.
 In Bologna, it stands not only as a symbol of artistic brilliance but also as a cultural icon intertwined with local traditions. One such tradition has its roots in the students of the historic University of Bologna, believed to be the oldest university in the world. Before sitting for exams, students engage in a unique ritual at the fountain, circling the Fontana del Nettuno twice counterclockwise for good luck and success. This practice, originating from the belief that the sculptor Giambologna himself circled the fountain during its construction, highlights its significance beyond its artistic merits. It serves as a communal space where students gather, imbued with hopes and aspirations as they face academic challenges.
 (set: $tasks to $tasks + 1)
 (set: $folklore to True)
 
-[[return to task page|Neptune&#39;s Fountain]]</tw-passagedata><tw-passagedata pid="26" name="Inscription Fact" tags="" position="3000,825" size="100,100">Congrats! You’ve completed the task.
+[[return to task page|Neptune&#39;s Fountain]]</tw-passagedata><tw-passagedata pid="26" name="Inscription Fact" tags="" position="3050,800" size="100,100">Congrats! You’ve completed the task.
 Neptune’s Fountain features several inscriptions that highlight its historical and civic significance:
 
 1. FORI ORNAMENTO (Ornament of the Square):
@@ -377,20 +388,11 @@ These inscriptions collectively underscore Neptune&#39;s Fountain as a significa
 (set: $tasks to $tasks + 1)
 (set: $inscription to True)
 
-[[return to task page|Neptune&#39;s Fountain]]</tw-passagedata><tw-passagedata pid="27" name="Not Inscription" tags="" position="2875,900" size="100,100">Unfortunately, this is not the right answer. Squint your eyes and try again.
+[[return to task page|Neptune&#39;s Fountain]]</tw-passagedata><tw-passagedata pid="27" name="Wrong Pope" tags="" position="650,1450" size="100,100">Unfortunately, this is not the right answer. Look closely at the statue and try again.
 
-&lt;img src=&quot;https://mediacrafters.github.io/IMD-MC2024/TWINE MEDIA/Icon_6.png&quot; alt=&quot;Try again&quot; class=&quot;monument&quot;&gt;
-[[&lt;div class=&quot;try&quot;&gt;try again&lt;/div&gt;|Inscription]] </tw-passagedata><tw-passagedata pid="28" name="Not Basilica" tags="" position="1325,1525" size="100,100">Unfortunately, this is not the right answer. Look around and try again.
+&lt;img src=&quot;https://mediacrafters.github.io/IMD-MC2024/TWINE MEDIA/Icon_6.png&quot; alt=&quot;Try again&quot; class=&quot;monument fail&quot;&gt;
 
-&lt;img src=&quot;https://mediacrafters.github.io/IMD-MC2024/TWINE MEDIA/Icon_6.png&quot; alt=&quot;Try again&quot; class=&quot;monument&quot;&gt;
-[[&lt;div class=&quot;try&quot;&gt;try again&lt;/div&gt;|Question Mark]] </tw-passagedata><tw-passagedata pid="29" name="Not Quatro Cantoni" tags="" position="225,1350" size="100,100">Unfortunately, this is not the right answer. Look around and try again.
-
-&lt;img src=&quot;https://mediacrafters.github.io/IMD-MC2024/TWINE MEDIA/Icon_6.png&quot; alt=&quot;Try again&quot; class=&quot;monument&quot;&gt;
-[[&lt;div class=&quot;try&quot;&gt;try again&lt;/div&gt;|Camera]]</tw-passagedata><tw-passagedata pid="30" name="Wrong Pope" tags="" position="725,1475" size="100,100">Unfortunately, this is not the right answer. Look closely at the statue and try again.
-
-&lt;img src=&quot;https://mediacrafters.github.io/IMD-MC2024/TWINE MEDIA/Icon_6.png&quot; alt=&quot;Try again&quot; class=&quot;monument&quot;&gt;
-
-[[&lt;div class=&quot;try&quot;&gt;try again&lt;/div&gt;|Magnifying Glass]]</tw-passagedata><tw-passagedata pid="31" name="Correct Pope" tags="" position="925,1475" size="100,100">Congrats! You completed the challenge. The subject of the picture is the statue of Pope Gregory XIII above the entrance of Palazzo d’Accursio. As a reward, the app unlocks the related hint on the map of the designated area, adding a pin on the position of the statue, and provides you some information about it:
+[[&lt;div class=&quot;try&quot;&gt;try again&lt;/div&gt;|Magnifying Glass]]</tw-passagedata><tw-passagedata pid="28" name="Correct Pope" tags="" position="925,1475" size="100,100">Congrats! You completed the challenge. The subject of the picture is the statue of Pope Gregory XIII above the entrance of Palazzo d’Accursio. As a reward, the app unlocks the related hint on the map of the designated area, adding a pin on the position of the statue, and provides you some information about it:
 
 “The statue of Pope Gregory XIII in Piazza Maggiore, Bologna, stands as a significant historical monument. Erected in 1580, it honors Pope Gregory XIII, known for reforming the calendar with the introduction of the Gregorian calendar in 1582. The statue portrays him in a regal pose, symbolizing his influential role in shaping the modern calendar system. Positioned prominently in the square, it serves as a reminder of Bologna&#39;s cultural and historical ties to the papacy and the broader European Renaissance.”
 
@@ -399,16 +401,53 @@ These inscriptions collectively underscore Neptune&#39;s Fountain as a significa
 (set: $challenges to $challenges + 1)
 (set: $magnifying_glass to True)
 
-[[return to the challlenges page|The Game]] </tw-passagedata><tw-passagedata pid="32" name="Not Nettuno" tags="" position="2400,1475" size="100,100">Unfortunately, this is not the right answer. Make sure you’re in the right place and try again.
-&lt;img src=&quot;https://mediacrafters.github.io/IMD-MC2024/TWINE MEDIA/Icon_6.png&quot; alt=&quot;Try again&quot; class=&quot;monument&quot;&gt;
-
-[[&lt;div class=&quot;try&quot;&gt;try again&lt;/div&gt;|Final Hint]]</tw-passagedata><tw-passagedata pid="33" name="Nettuno" tags="" position="2550,1400" size="100,100">Congratulations! The treasure hunt is over. 
+[[return to the challlenges page|The Game]] </tw-passagedata><tw-passagedata pid="29" name="Nettuno" tags="" position="2550,1400" size="100,100">Congratulations! The treasure hunt is over. 
 You found the monument: Neptune’s Fountain. 
 &lt;img src=&quot;TWINE MEDIA/Nettuno.jpg&quot; class=&quot;monument&quot; &gt;
 
 [[bring me to the monument|The Monument]] 
 
-(set: $challenges to 5)</tw-passagedata></tw-storydata>
+(set: $challenges to 5)</tw-passagedata><tw-passagedata pid="30" name="Not Quattro Cantoni - Pavement" tags="" position="200,1300" size="100,100">&lt;img src=&quot;TWINE MEDIA/pavement.jpg&quot; class=&quot;monument&quot;&gt;
+
+You took this lovely picture of the pavement in Piazza Maggiore. Unfortunately, this is not the right answer. Look around and try again.
+
+&lt;img src=&quot;https://mediacrafters.github.io/IMD-MC2024/TWINE MEDIA/Icon_6.png&quot; alt=&quot;Try again&quot; class=&quot;monument fail&quot;&gt;
+[[&lt;div class=&quot;try&quot;&gt;try again&lt;/div&gt;|Camera]]</tw-passagedata><tw-passagedata pid="31" name="Not Quattro Cantoni - Stranger" tags="" position="100,1200" size="100,100">&lt;img src=&quot;TWINE MEDIA/stranger.jpg&quot; class=&quot;monument&quot;&gt;
+
+You shouldn&#39;t take picture of strangers without asking. Don&#39;t do it again! Obviously, this is not the right answer. Look around and try again.
+
+&lt;img src=&quot;https://mediacrafters.github.io/IMD-MC2024/TWINE MEDIA/Icon_6.png&quot; alt=&quot;Try again&quot; class=&quot;monument fail&quot;&gt;
+[[&lt;div class=&quot;try&quot;&gt;try again&lt;/div&gt;|Camera]]</tw-passagedata><tw-passagedata pid="32" name="Not Basilica - Pigeon" tags="" position="1300,1525" size="100,100">&lt;img src=&quot;TWINE MEDIA/pigeon.jpg&quot; class=&quot;monument&quot;&gt;
+
+You took this lucky shot of a pigeon. Unfortunately, this is not the right answer. Look around and try again.
+
+&lt;img src=&quot;https://mediacrafters.github.io/IMD-MC2024/TWINE MEDIA/Icon_6.png&quot; alt=&quot;Try again&quot; class=&quot;monument fail&quot;&gt;
+[[&lt;div class=&quot;try&quot;&gt;try again&lt;/div&gt;|Question Mark]] </tw-passagedata><tw-passagedata pid="33" name="Not Basilica - Re Enzo" tags="" position="1175,1450" size="100,100">&lt;img src=&quot;TWINE MEDIA/reenzo.jpg&quot; class=&quot;monument&quot;&gt;
+
+You took this beautiful picture of Palazzo Re Enzo. Unfortunately, this is not the right answer. Look around and try again.
+
+&lt;img src=&quot;https://mediacrafters.github.io/IMD-MC2024/TWINE MEDIA/Icon_6.png&quot; alt=&quot;Try again&quot; class=&quot;monument fail&quot;&gt;
+[[&lt;div class=&quot;try&quot;&gt;try again&lt;/div&gt;|Question Mark]] </tw-passagedata><tw-passagedata pid="34" name="Not Nettuno - Selfie" tags="" position="2250,1400" size="100,100">&lt;img src=&quot;TWINE MEDIA/selfie.jpg&quot; class=&quot;monument&quot;&gt;
+
+You seem like a handsome young man, but obviously this is not the right answer. Make sure you’re in the right place and try again.
+&lt;img src=&quot;https://mediacrafters.github.io/IMD-MC2024/TWINE MEDIA/Icon_6.png&quot; alt=&quot;Try again&quot; class=&quot;monument fail&quot;&gt;
+
+[[&lt;div class=&quot;try&quot;&gt;try again&lt;/div&gt;|Final Hint]]</tw-passagedata><tw-passagedata pid="35" name="Not Nettuno - Porticoes" tags="" position="2125,1300" size="100,100">&lt;img src=&quot;TWINE MEDIA/porticoes.jpg&quot; class=&quot;monument&quot;&gt;
+
+You took this pretty picture of some porticoes. Unfortunately, this is not the right answer. Make sure you’re in the right place and try again.
+&lt;img src=&quot;https://mediacrafters.github.io/IMD-MC2024/TWINE MEDIA/Icon_6.png&quot; alt=&quot;Try again&quot; class=&quot;monument fail&quot;&gt;
+
+[[&lt;div class=&quot;try&quot;&gt;try again&lt;/div&gt;|Final Hint]]</tw-passagedata><tw-passagedata pid="36" name="Not Inscription - Hand" tags="" position="2900,875" size="100,100">&lt;img src=&quot;TWINE MEDIA/neptunehand.jpg&quot; class=&quot;monument&quot;&gt;
+
+You took this picture of Neptune&#39;s hand. Unfortunately, this is not the right answer. Squint your eyes and try again.
+
+&lt;img src=&quot;https://mediacrafters.github.io/IMD-MC2024/TWINE MEDIA/Icon_6.png&quot; alt=&quot;Try again&quot; class=&quot;monument fail&quot;&gt;
+[[&lt;div class=&quot;try&quot;&gt;try again&lt;/div&gt;|Inscription]] </tw-passagedata><tw-passagedata pid="37" name="Not Inscription - Water" tags="" position="2750,850" size="100,100">&lt;img src=&quot;TWINE MEDIA/water.jpg&quot; class=&quot;monument&quot;&gt;
+
+You took this quite pointless picture of the water. Unfortunately, this is not the right answer. Squint your eyes and try again.
+
+&lt;img src=&quot;https://mediacrafters.github.io/IMD-MC2024/TWINE MEDIA/Icon_6.png&quot; alt=&quot;Try again&quot; class=&quot;monument fail&quot;&gt;
+[[&lt;div class=&quot;try&quot;&gt;try again&lt;/div&gt;|Inscription]] </tw-passagedata></tw-storydata>
 <script title="Twine engine code" data-main="harlowe">(function(){"use strict";
 var require,define;!function(){var e={},r={};require=function(i){var n=e[i];return n&&(r[i]=n[1].apply(void 0,n[0].map(require)),e[i]=void 0),r[i]},(define=function(r,i,n){if("function"==typeof r)return r();e[r]=[i,n]}).amd=!0}();/*!
  * https://github.com/paulmillr/es6-shim
